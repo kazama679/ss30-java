@@ -48,18 +48,18 @@ end;
 delimiter //
 
 create table employee(
-                         emp_id varchar(5) primary key not null,
-                         emp_name varchar(150) not null,
-                         emp_email varchar(255) not null,
-                         emp_phone varchar(10) not null,
-                         emp_gender varchar(10) not null,
-                         emp_salary_level int not null,
-                         emp_salary float not null,
-                         emp_birthday varchar(255) not null,
-                         emp_address varchar(255) not null,
-                         emp_status varchar(20) not null,
-                         emp_id_dep int not null,
-                         foreign key (emp_id_dep) references departments(dep_id)
+    emp_id varchar(5) primary key not null,
+    emp_name varchar(150) not null,
+    emp_email varchar(255) not null,
+    emp_phone varchar(10) not null,
+    emp_gender varchar(10) not null,
+    emp_salary_level int not null,
+    emp_salary float not null,
+    emp_birthday varchar(255) not null,
+    emp_address varchar(255) not null,
+    emp_status varchar(20) not null,
+    emp_id_dep int not null,
+    foreign key (emp_id_dep) references departments(dep_id)
 );
 
 
