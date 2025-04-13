@@ -1,6 +1,5 @@
 package business.model;
 
-import presentation.DepartmentUI;
 import validate.ValidateEmployee;
 import validate.Validator;
 
@@ -127,7 +126,7 @@ public class Employee {
 
     public void inputData(Scanner scanner) {
         System.out.println("Nhập vào id nhân viên: ");
-        this.id = scanner.nextLine();
+        this.id = ValidateEmployee.validId(scanner);
         System.out.println("Nhập vào tên nhân viên: ");
         this.name = Validator.ValidString(scanner, 15, 150);
         this.email = Validator.ValidEmail(scanner);
